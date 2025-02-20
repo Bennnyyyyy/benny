@@ -1,15 +1,10 @@
 import pic from './../assets/ben.jpg';
+import "../styles/hero.css";
 
 function Hero() {
   return (
-    <div id="home" className="hero"> {/* Added id="home" */}
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>  {/* Scroll to top */}
-          <li><a href="#about">About</a></li> {/* Scroll to About section */}
-          <li><a href="#contact">Contact</a></li> 
-        </ul>
-      </nav>
+    <div id="home" className="hero"> 
+      
       <div className="hero-container">
         <div className="content">
           <div className="image-container">

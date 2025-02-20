@@ -1,18 +1,17 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+
 import Hero from './components/hero.jsx';
 import About from './components/about.jsx';
-
+import Navbar from './components/nav.jsx';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div> {/* ✅ Wrapped components in a div for proper structure */}
-      <Hero />
-      <About />
-    </div>
+    <Router>
+     <Navbar /> 
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 
