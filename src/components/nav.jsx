@@ -1,3 +1,4 @@
+// src/components/Nav.jsx
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import '../styles/nav.css';
@@ -22,8 +23,10 @@ function Navbar() {
       </div>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="/about">About</Link></li> {/* ✅ Correct Link */}
+        <li><Link to="/experience">Experience</Link></li> {/* ✅ Correct Link */}
+        <li><Link to="/blog">Blog</Link></li> {/* ✅ Correct Link */}
+        <li><Link to="/contact">Contact</Link></li> {/* ✅ Correct Link */}
       </ul>
     </nav>
   );
