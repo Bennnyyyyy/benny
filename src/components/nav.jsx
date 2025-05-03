@@ -13,21 +13,24 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="Logo" />
+      <div className="nav-container">
+        <div className="logo">
+          <img src={logo} alt="Logo" />
+        </div>
+        <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+        <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/projects">Projects</Link></li>
+          <li><Link to="/experience">Experience</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
       </div>
-      <div className={`hamburger-menu ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
-      </div>
-      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li> {/* ✅ Correct Link */}
-        <li><Link to="/experience">Experience</Link></li> {/* ✅ Correct Link */}
-        <li><Link to="/blog">Blog</Link></li> {/* ✅ Correct Link */}
-        <li><Link to="/contact">Contact</Link></li> {/* ✅ Correct Link */}
-      </ul>
     </nav>
   );
 }

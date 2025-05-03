@@ -8,7 +8,8 @@ import Experience from './components/Experience';  // Import the Experience comp
 import Blog from './pages/Blog';  // Import the Blog page component
 import BlogPost from './pages/BlogPost';  // Import the BlogPost page component
 import Contact from './pages/Contact';  // Import the Contact page component
-import Footer from './components/Footer';  // Import the Footer component
+import Footer from './components/Footer';  // Import the Footer 
+
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<><Hero /><About /><Experience /><Projects /></>} />
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />  {/* Route to display individual blog post */}
         <Route path="/contact" element={<Contact />} />
