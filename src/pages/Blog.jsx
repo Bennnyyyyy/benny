@@ -1,9 +1,8 @@
 // src/pages/Blog.jsx
-import { Link } from 'react-router-dom';
 import blogData from '../data/blogData';
 import '../styles/blog.css';
 
-const Blog = () => {
+const Blog = ({ onViewPost }) => {
   return (
     <div className="blog-page">
       <header className="blog-header">
@@ -30,9 +29,12 @@ const Blog = () => {
               <h2>{post.title}</h2>
               <p className="card-excerpt">{post.content.split(' ').slice(0, 25).join(' ')}...</p>
               <div className="card-footer">
-                <Link to={`/blog/${post.id}`} className="read-more-btn">
+                <button 
+                  onClick={() => onViewPost(post)}
+                  className="read-more-btn"
+                >
                   Read More
-                </Link>
+                </button>
               </div>
             </div>
           </div>

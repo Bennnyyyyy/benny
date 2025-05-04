@@ -1,14 +1,16 @@
 // src/pages/BlogPost.jsx
-import { useParams, Link } from "react-router-dom";
-import blogData from "../data/blogData";
-import "../styles/blog.css";
+import '../styles/blog.css';
 
-const BlogPost = () => {
-  const { id } = useParams();
-  const post = blogData.find((p) => p.id === parseInt(id));
-
+const BlogPost = ({ post, onBack }) => {
   if (!post) {
-    return <div className="not-found">Post not found</div>;
+    return (
+      <div className="blog-post-container">
+        <div className="not-found">Post not found</div>
+        <button onClick={onBack} className="back-btn">
+          ← Back to Blog
+        </button>
+      </div>
+    );
   }
 
   return (
@@ -46,9 +48,9 @@ const BlogPost = () => {
         )}
 
         <div className="back-to-blog">
-          <Link to="/blog" className="back-btn">
+          <button onClick={onBack} className="back-btn">
             ← Back to Blog
-          </Link>
+          </button>
         </div>
       </article>
     </div>

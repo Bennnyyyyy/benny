@@ -1,7 +1,7 @@
 // src/components/Experience.jsx
 import React from 'react';
 import '../styles/experience.css';
-import { FaMapMarkerAlt, FaLink } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const Experience = () => {
   return (
@@ -9,67 +9,53 @@ const Experience = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Work Experience</h2>
-          <p className="section-subtitle">My professional journey since 2019</p>
+          <p className="section-subtitle">My journey</p>
           <div className="divider"></div>
         </div>
         
         <div className="experience-timeline">
-          {/* Future Development */}
+          {/* Project Manager - Smarty Hub */}
           <div className="experience-item">
             <div className="experience-marker"></div>
             <div className="experience-content">
-              <h3 className="experience-title">Future Development</h3>
+              <div className="experience-header">
+                <h3 className="experience-title">Project Manager</h3>
+                <span className="experience-date">2024 - Present</span>
+              </div>
+              <p className="experience-company">Capstone Project - Smarty Hub</p>
               <ul className="experience-list">
-                <li><span className="highlight"></span>Built customer portals using React/TypeScript for 50+ clients</li>
-                <li><span className="highlight"></span>Developed Node.js/GraphQL backends with 40% faster response times</li>
-                <li><span className="highlight"></span>Automated deployments reducing process from hours to minutes</li>
-                <li><span className="highlight"></span>Mentored junior developers in best practices</li>
-                <li><span className="highlight"></span>Optimized databases for 60% faster page loads</li>
+                <li><span className="highlight"></span>Led a team of 5 developers in creating an educational platform for elementary students</li>
+                <li><span className="highlight"></span>Coordinated between stakeholders, designers, and developers to ensure project alignment</li>
+                <li><span className="highlight"></span>Implemented Agile methodologies with bi-weekly sprints and stand-up meetings</li>
+                <li><span className="highlight"></span>Managed project timeline and deliverables, ensuring on-time completion</li>
+                <li><span className="highlight"></span>Conducted user testing sessions and incorporated feedback into development</li>
               </ul>
             </div>
           </div>
 
-          {/* Future Development */}
+          {/* Tester Experience */}
           <div className="experience-item">
             <div className="experience-marker"></div>
             <div className="experience-content">
-              <h3 className="experience-title">Future Development</h3>
+              <div className="experience-header">
+                <h3 className="experience-title">Tester</h3>
+                <span className="experience-date">2023 - 2024</span>
+              </div>
+              <p className="experience-company">WMSU Dental Clinic Appointment System</p>
               <ul className="experience-list">
-                <li><span className="highlight"></span>Built customer portals using React/TypeScript for 50+ clients</li>
-                <li><span className="highlight"></span>Developed Node.js/GraphQL backends with 40% faster response times</li>
-                <li><span className="highlight"></span>Automated deployments reducing process from hours to minutes</li>
-                <li><span className="highlight"></span>Mentored junior developers in best practices</li>
-                <li><span className="highlight"></span>Optimized databases for 60% faster page loads</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Fullstack Developer */}
-          <div className="experience-item">
-            <div className="experience-marker"></div>
-            <div className="experience-content">
-              <h3 className="experience-title">Fullstack Developer</h3>
-              <p className="experience-company">Questionic Corporation</p>
-              <ul className="experience-list">
-                <li><span className="highlight"></span>Built React Native apps for 10+ daily users</li>
-                <li><span className="highlight"></span>Developed Django backend handling 5+ daily registrations</li>
-                <li><span className="highlight"></span>Reduced server costs by 30% via cloud optimization</li>
-                <li><span className="highlight"></span>Implemented WebSocket for 45% engagement boost</li>
+                <li><span className="highlight"></span>Tested and validated key features to ensure system stability and reliability</li>
+                <li><span className="highlight"></span>Collaborated with developers to identify, document, and fix bugs</li>
+                <li><span className="highlight"></span>Conducted usability testing to improve user experience</li>
+                <li><span className="highlight"></span>Prepared test reports and feedback to support continuous improvements</li>
               </ul>
             </div>
           </div>
         </div>
 
-        
-
         <div className="experience-footer">
           <div className="footer-content">
-            <p className="footer-link">
-              <FaLink className="icon" /> Follow us: Australia
-            </p>
-            <p className="footer-visit">Visit your website today</p>
             <p className="footer-location">
-              <FaMapMarkerAlt className="icon" /> <em>Naked City, Philippines</em>
+              <FaMapMarkerAlt className="icon" /> <em>Zamboanga City, Philippines</em>
             </p>
           </div>
         </div>

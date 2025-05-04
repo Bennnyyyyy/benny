@@ -1,43 +1,33 @@
 // src/App.jsx
-import { useEffect } from 'react';
-import Nav from './components/Nav';
+import { useState } from 'react';
+import Nav from './components/nav';
 import Hero from './components/hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Blog from './pages/Blog';  // Your existing Blog component
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 
 function App() {
-  // Handle scroll to section when URL hash changes
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      if (hash) {
-        const element = document.getElementById(hash.substring(1));
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
+  const [viewingPost, setViewingPost] = useState(null);
 
-    // Check hash on initial load
-    handleHashChange();
-    
-    // Listen for hash changes
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, []);
+  // Handle scroll to section
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
-      <Nav />
+      <Nav scrollToSection={scrollToSection} />
       
-      {/* Main scrollable content */}
       <main>
         <section id="home">
-          <Hero />
+          <Hero scrollToSection={scrollToSection} />
         </section>
         
         <section id="about">
@@ -53,7 +43,17 @@ function App() {
         </section>
         
         <section id="blog">
-          <Blog />  {/* Your blog content now scrolls with the page */}
+          {viewingPost ? (
+            <BlogPost 
+              post={viewingPost} 
+              onBack={() => {
+                setViewingPost(null);
+                scrollToSection('blog');
+              }} 
+            />
+          ) : (
+            <Blog onViewPost={setViewingPost} />
+          )}
         </section>
         
         <section id="contact">

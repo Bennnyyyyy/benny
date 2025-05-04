@@ -7,15 +7,15 @@ function Hero() {
   const fullText = "A Web Designer";
   const [showButtons, setShowButtons] = useState(false);
   const heroRef = useRef(null);
+  const imageWrapperRef = useRef(null);
 
-  // Enhanced typing animation with variable speed
+  // Typing animation
   useEffect(() => {
     let i = 0;
     const typingInterval = setInterval(() => {
       if (i < fullText.length) {
         setTypedText(fullText.substring(0, i + 1));
         i++;
-        // Randomize typing speed slightly for more natural feel
         const speed = Math.random() * 50 + 80;
         clearInterval(typingInterval);
         setTimeout(() => {
@@ -31,26 +31,26 @@ function Hero() {
         }, 100);
       }
     }, 150);
-
     return () => clearInterval(typingInterval);
   }, []);
 
-  // Smoother parallax effect
+  // 3D Parallax effect
   useEffect(() => {
     const handleMouseMove = (e) => {
-      if (heroRef.current) {
+      if (heroRef.current && imageWrapperRef.current) {
         const x = e.clientX / window.innerWidth;
         const y = e.clientY / window.innerHeight;
         heroRef.current.style.setProperty('--mouse-x', x);
         heroRef.current.style.setProperty('--mouse-y', y);
         
-        // Add subtle tilt effect to image
-        const tiltX = (y - 0.5) * 10;
-        const tiltY = (0.5 - x) * 10;
-        const imageWrapper = heroRef.current.querySelector('.image-wrapper');
-        if (imageWrapper) {
-          imageWrapper.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-        }
+        const tiltX = (y - 0.5) * 15;
+        const tiltY = (0.5 - x) * 15;
+        imageWrapperRef.current.style.transform = `
+          perspective(1000px) 
+          rotateX(${tiltX}deg) 
+          rotateY(${tiltY}deg)
+          scale(1.03)
+        `;
       }
     };
 
@@ -58,14 +58,10 @@ function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Function to handle smooth scrolling to sections
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -89,18 +85,12 @@ function Hero() {
             </p>
             {showButtons && (
               <div className="button-container">
-                <button 
-                  onClick={() => scrollToSection('projects')} 
-                  className="primary-btn"
-                >
+                <button onClick={() => scrollToSection('projects')} className="primary-btn">
                   View My Work
                   <span className="hover-effect"></span>
                   <span className="btn-glow"></span>
                 </button>
-                <button 
-                  onClick={() => scrollToSection('contact')} 
-                  className="secondary-btn"
-                >
+                <button onClick={() => scrollToSection('contact')} className="secondary-btn">
                   Contact Me
                   <span className="hover-effect"></span>
                   <span className="btn-glow"></span>
@@ -109,11 +99,15 @@ function Hero() {
             )}
           </div>
           <div className="image-container">
-            <div className="image-wrapper">
-              <img src={pic} alt="Benladin Mohammad Dinin" className="profile-image" />
-              <div className="image-border"></div>
-              <div className="image-glow"></div>
-              <div className="image-dots"></div>
+            <div className="image-frame">
+              <div className="frame-decoration top-left"></div>
+              <div className="frame-decoration top-right"></div>
+              <div className="frame-decoration bottom-left"></div>
+              <div className="frame-decoration bottom-right"></div>
+              <div className="image-wrapper" ref={imageWrapperRef}>
+                <img src={pic} alt="Benladin Mohammad Dinin" className="profile-image" />
+                <div className="image-glow"></div>
+              </div>
             </div>
           </div>
         </div>

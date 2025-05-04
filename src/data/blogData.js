@@ -16,8 +16,8 @@ const blogData = [
       "/tour/gal1d1.jpg",
       "/tour/gal2d1.jpg",
       "/tour/gal3d1.jpg",
-      "/tour/gal4d1.jpg",
-      "/images/tour-day1-2.jpg"
+      "/tour/gal4d1.jpg"
+      
     ]
   },
   {
@@ -36,8 +36,8 @@ const blogData = [
       "/tour/gal1d2.jpg",
       "/tour/gal2d2.jpg",
       "/tour/gal3d2.jpg",
-      "/tour/gal4d2.jpg",
-      "/images/tour-day1-2.jpg"
+      "/tour/gal4d2.jpg"
+      
     ]
   },
   {
@@ -58,8 +58,8 @@ const blogData = [
       "/tour/gal3d3.jpg",
       "/tour/gal4d3.jpg",
       "/tour/gal5d3.jpg",
-      "/tour/gal6d3.jpg",
-      "/images/tour-day1-2.jpg"
+      "/tour/gal6d3.jpg"
+      
     ]
   },
   {
@@ -78,8 +78,8 @@ const blogData = [
       "/tour/gal1d4.jpg",
       "/tour/gal2d4.jpg",
       "/tour/gal3d4.jpg",
-      "/tour/gal4d4.jpg",
-      "/tour/gal6d4.jpg"
+      "/tour/gal4d4.jpg"
+      
     ]
   },
   {

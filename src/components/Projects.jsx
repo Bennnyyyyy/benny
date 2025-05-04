@@ -5,21 +5,31 @@ import '../styles/projects.css';
 
 const projects = [
   {
-    title: 'PixelMon',
-    description: 'All-in-one Pokédex-Inspired web app. Explore detailed stats, abilities, and evolutions for every creature in the Pixelmon world.',
-    tags: ['React', 'JavaScript', 'API'],
-    image: '/project/day1.jpg', // Your image path
-    repoLink: '#',
-    liveLink: '#'
+    title: 'Pokemon Battle',
+    description: 'Pokémon Mini Battle web app. Choose your Pokémon and engage in quick, turn-based battles with dynamic stats and abilities.',
+    tags: ['JavaScript', 'CSS', 'HTML'],
+    image: '/project/poke.jpg', // Your image path
+    repoLink: 'https://github.com/Bennnyyyyy/pokedex.git',
+    liveLink: 'https://pokedexsitee.netlify.app/'
   },
   {
-    title: 'Glasmorphism Calculator',
+    title: 'Smarty Hub: Digitalize Learning Platform for  Elementary Students',
     description: 'Modern calculator with glassmorphism UI design featuring advanced mathematical functions.',
-    tags: ['JavaScript', 'CSS3', 'HTML5'],
-    image: '/project/cal.jpg',
-    repoLink: '#',
-    liveLink: '#'
+    tags: ['PHP', 'CSS3', 'HTML5'],
+    image: '/project/smarty.jpg',
+    repoLink: 'https://github.com/Ameeffy/DentalWmsuu.git',
+    liveLink: 'https://smartyhub.site/'
+    
   },
+
+  {
+    title: 'WMSU Dental Clinic Appointment System',
+    description: 'A web-based appointment platform designed to streamline dental consultations for WMSU students and staff.',
+    tags: ['Django', 'CSS3', 'HTML5'],
+    image: '/project/dental.jpg',
+    
+  }
+  
   // Add other projects following the same structure
 ];
 
