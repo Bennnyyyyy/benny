@@ -27,8 +27,22 @@ const projects = [
     description: 'A web-based appointment platform designed to streamline dental consultations for WMSU students and staff.',
     tags: ['Django', 'CSS3', 'HTML5'],
     image: '/project/dental.jpg',
+    repoLink: 'https://github.com/Ameeffy/DentalWmsuu.git',
+    
+    
+  },
+
+  {
+    title: 'Todo-List',
+    description: 'A simple and responsive web-based Todo List app built to help users organize and manage daily tasks efficiently. It allows users to create, update, and delete tasks in real time, with a clean and intuitive interface for better productivity.',
+    tags: ['Django', 'CSS3', 'HTML5'],
+    image: '/project/todo.jpg',
+    repoLink: 'https://github.com/Ameeffy/DentalWmsuu.git',
     
   }
+  
+
+  
   
   // Add other projects following the same structure
 ];
