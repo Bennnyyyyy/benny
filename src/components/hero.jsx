@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import pic from './../assets/ben.jpg';
 import "../styles/hero.css";
-import { Link } from 'react-router-dom';
 
 function Hero() {
   const [typedText, setTypedText] = useState('');
@@ -59,6 +58,17 @@ function Hero() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  // Function to handle smooth scrolling to sections
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div id="home" className="hero" ref={heroRef}>
       <div className="hero-overlay"></div>
@@ -68,7 +78,6 @@ function Hero() {
           <div className="text-content">
             <h1 className="name-title">
               <span className="greeting">Hello,</span>  <span className="highlight"> I'm Benladin</span>
-              
             </h1>
             <h2 className="profession">
               {typedText}
@@ -80,16 +89,22 @@ function Hero() {
             </p>
             {showButtons && (
               <div className="button-container">
-                <Link to="/projects" className="primary-btn">
+                <button 
+                  onClick={() => scrollToSection('projects')} 
+                  className="primary-btn"
+                >
                   View My Work
                   <span className="hover-effect"></span>
                   <span className="btn-glow"></span>
-                </Link>
-                <Link to="/contact" className="secondary-btn">
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className="secondary-btn"
+                >
                   Contact Me
                   <span className="hover-effect"></span>
                   <span className="btn-glow"></span>
-                </Link>
+                </button>
               </div>
             )}
           </div>

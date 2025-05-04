@@ -1,33 +1,69 @@
 // src/App.jsx
-import { Routes, Route } from 'react-router-dom';  // Import Routes and Route from react-router-dom
-import Nav from './components/Nav';  // Import the Nav component
-import Hero from './components/hero';  // Import the Hero component
-import About from './components/About';  // Import the About component
-import Projects from './components/Projects';  // Import the Projects component
-import Experience from './components/Experience';  // Import the Experience component
-import Blog from './pages/Blog';  // Import the Blog page component
-import BlogPost from './pages/BlogPost';  // Import the BlogPost page component
-import Contact from './pages/Contact';  // Import the Contact page component
-import Footer from './components/Footer';  // Import the Footer 
-
+import { useEffect } from 'react';
+import Nav from './components/Nav';
+import Hero from './components/hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Blog from './pages/Blog';  // Your existing Blog component
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 function App() {
+  // Handle scroll to section when URL hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Check hash on initial load
+    handleHashChange();
+    
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   return (
     <>
-      <Nav />  {/* Navigation bar */}
-      <Routes>
-        {/* Define routes for each page */}
-        <Route path="/" element={<><Hero /><About /><Experience /><Projects /></>} />
-        <Route path="/about" element={<About />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<BlogPost />} />  {/* Route to display individual blog post */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />  {/* Footer */}
+      <Nav />
+      
+      {/* Main scrollable content */}
+      <main>
+        <section id="home">
+          <Hero />
+        </section>
+        
+        <section id="about">
+          <About />
+        </section>
+        
+        <section id="experience">
+          <Experience />
+        </section>
+        
+        <section id="projects">
+          <Projects />
+        </section>
+        
+        <section id="blog">
+          <Blog />  {/* Your blog content now scrolls with the page */}
+        </section>
+        
+        <section id="contact">
+          <Contact />
+        </section>
+      </main>
+      
+      <Footer />
     </>
   );
 }
 
-export default App;  // Export App component for use in index.js
+export default App;

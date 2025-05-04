@@ -1,29 +1,37 @@
 // src/data/blogData.js
 const blogData = [
   {
-    
-      "id": 1,
-      "title": "Day 1 - Introduction to the Tour",
-      "date": "April 07, 2025",
-      "content": "📍 Day 1: City Tour – A Journey Through History and Culture\n\nOur first day was an exciting start to our educational tour! We kicked things off with a city tour, where we had the chance to explore some of the most iconic historical sites in Manila.\n\nOur first stop was Rizal Park, also known as Luneta. We took lots of pictures and enjoyed the scenic surroundings. It was amazing to finally see the monument of our national hero, Dr. Jose Rizal, in person. The park was peaceful and beautiful—a great way to begin our trip.\n\nNext, we visited Intramuros, the famous walled city of Manila. Walking through the cobblestone streets felt like stepping back in time. One of the highlights of our visit was Fort Santiago, where we had a short but meaningful recap of Philippine history. It was eye-opening to learn about the sacrifices made during the Spanish era, especially those of Rizal and the revolutionaries.\n\nBefore heading to our dorm, we made a final stop at a nearby mall for some window shopping. It was fun to relax and browse through the stores after a full day of learning and sightseeing.\n\nOverall, Day 1 was a great mix of education and fun, and it made us excited for what's to come in the next days!",
-      "images": [
-        "/tour/day1.jpg",
-        "/tour/gal1d1.jpg",
-        "/tour/gal2d1.jpg",
-        "/tour/gal3d1.jpg",
-        "/tour/gal4d1.jpg",
-        "/images/tour-day1-2.jpg"
-      ]
-    
-  },
- 
+    id: 1,
+    title: "🌆 Day 1 - Manila's Historical Heart",
+    date: "April 07, 2025",
+    content: `🏛️ Our educational tour began with an immersive exploration of Manila's rich history. 
 
+🌅 The day started at the iconic Rizal Park (Luneta), where we gathered around the monument of Dr. Jose Rizal, our national hero. Our guide shared fascinating stories about Rizal's life and the significance of this historic site as we took in the peaceful surroundings.
+
+🏰 We then traveled back in time as we entered the walls of Intramuros, the old Spanish colonial capital. Walking along the cobblestone streets, we visited Fort Santiago and stood in the very courtyard where Rizal spent his final days. The preserved architecture and artifacts gave us a tangible connection to our country's past.
+
+🛍️ To conclude our first day, we stopped at a nearby mall where we had free time to explore, shop for souvenirs, and reflect on everything we had learned about Manila's historical significance.`,
+    images: [
+      "/tour/day1.jpg",
+      "/tour/gal1d1.jpg",
+      "/tour/gal2d1.jpg",
+      "/tour/gal3d1.jpg",
+      "/tour/gal4d1.jpg",
+      "/images/tour-day1-2.jpg"
+    ]
+  },
   {
-    "id": 2,
-    "title": "Day 2 - Learning the Basics",
-    "date": "April 08, 2025",
-    "content": "📍 Day 2: Subic – Behind the Scenes of Law Enforcement and Seaport Operations\n\nOur second day started very early as we traveled to Subic for another exciting and educational experience. Despite the early call time, we were all energized for the day ahead!\n\nOur first stop was the SBMA Law Enforcement Department – Communication Division. There, we learned about how they manage traffic operations, tracking, and various communication systems. It was impressive to see the coordination involved in ensuring order and safety. The employees were very welcoming and engaging, which made the learning experience even more enjoyable.\n\nAfter the session, we had lunch near the seaport, enjoying a delicious meal with a relaxing view of the sea. The calm atmosphere was a perfect break before our next activity.\n\nIn the afternoon, we headed to the SBMA Seaport Department – Vessel Traffic Management System (VTMS). We got to see firsthand how they operate the tracking and communication systems for incoming and outgoing vessels. They even let us observe a live operation, showing how real-time vessel monitoring works. It was informative, high-tech, and fascinating to witness the behind-the-scenes process of port management.\n\n🔍 Highlights of Day 2:\n\n• Visited SBMA Law Enforcement Communication Division\n• Learned about traffic management, tracking, and communication systems\n• Friendly and engaging staff made the session fun\n• Had lunch by the seaport with a relaxing view\n• Explored the SBMA Seaport Department – VTMS\n• Observed live vessel tracking and communication\n• Gained insights into seaport operations and safety procedures",
-    "images": [
+    id: 2,
+    title: "🚔 Day 2 - Subic's Security Systems",
+    date: "April 08, 2025",
+    content: `⏰ We rose before dawn for our trip to Subic, where we gained exclusive access to facilities rarely seen by the public. 
+
+📡 At the SBMA Law Enforcement Department, officers demonstrated how they monitor and manage traffic across the entire special economic zone using advanced tracking systems and real-time communication networks.
+
+🌊 After a relaxing lunch by the seaport with beautiful ocean views, we proceeded to the Vessel Traffic Management System. Here, we watched in awe as controllers tracked numerous ships moving through Subic Bay using radar and AIS technology.
+
+⚓ The highlight was seeing how they coordinate with coast guard and port authorities to ensure safe navigation in these busy waters - a perfect blend of technology and maritime expertise.`,
+    images: [
       "/tour/day2.jpg",
       "/tour/gal1d2.jpg",
       "/tour/gal2d2.jpg",
@@ -31,14 +39,18 @@ const blogData = [
       "/tour/gal4d2.jpg",
       "/images/tour-day1-2.jpg"
     ]
-  },    
-
-
+  },
   {
     id: 3,
-    title: "Day 2 - Learning the Basics",
-    date: "May 2, 2023",
-    content: "On Day 2, we dove deeper into the core topics. The morning session covered fundamental principles with hands-on exercises. After lunch, we had a workshop where we applied these concepts to real-world scenarios. The highlight was a guest lecture from a renowned expert in the field who shared valuable insights from their career.",
+    title: "🏛️ Day 3 - Presidential Legacy Tour",
+    date: "April 09, 2025",
+    content: `📜 Our third day focused on Philippine presidential history through two fascinating museums.
+
+🕊️ At Museo ni Manuel Quezon, we walked through exhibits showcasing the life and achievements of our Commonwealth president. Seeing his personal belongings and the recreation of his office made history feel remarkably personal. The most moving moment was paying respects at his final resting place within the museum.
+
+🚗 The Presidential Car Museum offered a completely different perspective. Each vintage vehicle told its own story - from the sturdy Mercedes-Benz used during Marcos' time to the more modest cars of earlier presidents. Our guide pointed out how bulletproofing and design evolved with each administration.
+
+📸 We couldn't resist taking photos beside the most photogenic cars, imagining what important events they might have witnessed in our nation's history.`,
     images: [
       "/tour/day3.jpg",
       "/tour/gal1d3.jpg",
@@ -50,40 +62,86 @@ const blogData = [
       "/images/tour-day1-2.jpg"
     ]
   },
+  {
+    id: 4,
+    title: "🤖 Day 4 - Robotics & Technology",
+    date: "April 10, 2025",
+    content: `🔧 Today's visit to Hytec Power Inc. transported us into the future of industrial automation.
 
+🦾 We watched in fascination as robotic arms performed precise welding and assembly tasks with superhuman accuracy. Engineers explained how these machines can work 24/7 with perfect consistency, revolutionizing manufacturing.
+
+💡 The most eye-opening demonstration showed how artificial intelligence helps these systems learn and improve over time. We saw robots that could identify defects invisible to the human eye and automatically adjust their processes.
+
+🤯 Many of us left with new career aspirations after seeing how these advanced technologies are creating exciting opportunities in engineering and industrial design.`,
+    images: [
+      "/tour/day4.jpg",
+      "/tour/gal1d4.jpg",
+      "/tour/gal2d4.jpg",
+      "/tour/gal3d4.jpg",
+      "/tour/gal4d4.jpg",
+      "/tour/gal6d4.jpg"
+    ]
+  },
   {
     id: 5,
-    title: "Day 2 - Learning the Basics",
-    date: "May 2, 2023",
-    content: "On Day 2, we dove deeper into the core topics. The morning session covered fundamental principles with hands-on exercises. After lunch, we had a workshop where we applied these concepts to real-world scenarios. The highlight was a guest lecture from a renowned expert in the field who shared valuable insights from their career.",
+    title: "🚦 Day 5 - Urban Transportation Systems",
+    date: "April 11, 2025",
+    content: `🏙️ Today gave us a behind-the-scenes look at how Metro Manila keeps moving.
+
+🚦 At the MMDA Traffic Engineering Center, we saw the massive wall of monitors tracking traffic across the metropolis. Controllers showed us how they coordinate traffic lights and deploy personnel to hotspots in real-time.
+
+🚆 Riding the LRT Line 2 with our guide, we learned about the train's safety systems and maintenance procedures. It was fascinating to see the control room where operators monitor every train's position and speed.
+
+🚏 The contrast between road and rail solutions gave us valuable insights into the challenges of urban planning in one of the world's densest cities.`,
     images: [
-      "/images/tour-day2-main.jpg",
-      "/images/tour-day2-1.jpg",
-      "/images/tour-day2-2.jpg"
+      "/tour/day5.jpg",
+      "/tour/gal1d5.jpg",
+      "/tour/gal2d5.jpg",
+      "/tour/gal3d5.jpg",
+      "/tour/gal4d5.jpg",
+      "/tour/gal5d5.jpg",
+      "/tour/gal6d5.jpg"
     ]
   },
-
   {
     id: 6,
-    title: "Day 2 - Learning the Basics",
-    date: "May 2, 2023",
-    content: "On Day 2, we dove deeper into the core topics. The morning session covered fundamental principles with hands-on exercises. After lunch, we had a workshop where we applied these concepts to real-world scenarios. The highlight was a guest lecture from a renowned expert in the field who shared valuable insights from their career.",
+    title: "🏔️ Day 6 - Baguio Adventure",
+    date: "April 12, 2025",
+    content: `🌲 Our morning arrival in Baguio greeted us with cool pine-scented air - a welcome change from Manila's heat.
+
+🍓 At the Strawberry Farm, we enjoyed picking fresh berries and shopping for local treats like strawberry jam and ube pastries. The scenic mountain views made perfect backdrops for group photos.
+
+🛕 The Chinese Bell Church offered a peaceful interlude with its beautiful gardens and ornate architecture. We learned about the Chinese-Filipino community's history while admiring the temple's intricate designs.
+
+🎖️ The Philippine Military Academy impressed us with its disciplined cadets and sprawling campus. Seeing the training grounds and military museum gave us new appreciation for our armed forces.`,
     images: [
-      "/images/tour-day2-main.jpg",
-      "/images/tour-day2-1.jpg",
-      "/images/tour-day2-2.jpg"
+      "/tour/day6.jpg",
+      "/tour/gal1d6.jpg",
+      "/tour/gal2d6.jpg",
+      "/tour/gal3d6.jpg",
+      "/tour/gal5d6.jpg",
+      "/tour/gal6d6.jpg",
+      "/tour/gal7d6.jpg",
+      "/tour/gal8d6.jpg",
+      "/tour/gal9d6.jpg"
     ]
   },
-
   {
     id: 7,
-    title: "Day 3 - More Advanced Learning",
-    date: "May 3, 2023",
-    content: "We explored more technical subjects today. The sessions were challenging but rewarding, covering advanced techniques and cutting-edge developments. In the evening, we had a networking event where we connected with professionals in the industry. Many of us came away with new ideas and potential collaborations.",
+    title: "🛏️ Day 7 - Reflective Farewell",
+    date: "April 13, 2025",
+    content: `☕ Our final morning in Baguio began with quiet reflection at Prince Plaza Hotel. 
+
+🌄 Watching the sunrise over the mountains from our window, we journaled about the week's experiences and all we had learned about Philippine history, technology, and culture.
+
+🚶‍♂️ A leisurely walk through Session Road let us savor Baguio's cool climate one last time. We stopped at a café for hot chocolate and freshly baked bread, reminiscing about our favorite moments from the tour.
+
+🍽️ Our farewell lunch was bittersweet - delicious food mixed with the realization that our amazing journey was ending. As we boarded the bus back to Manila, we exchanged contact information and promised to stay connected.`,
     images: [
-      "/images/tour-day3-main.jpg",
-      "/images/tour-day3-1.jpg",
-      "/images/tour-day3-2.jpg"
+      "/tour/day7.jpg",
+      "/tour/gal1d7.jpg",
+      "/tour/gal2d7.jpg",
+      "/tour/gal3d7.jpg"
     ]
   }
 ];
