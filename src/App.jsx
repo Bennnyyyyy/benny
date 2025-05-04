@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Nav from './components/nav';
 import Hero from './components/hero';
-import About from './components/About';
+import About from './components/about';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Blog from './pages/Blog';
